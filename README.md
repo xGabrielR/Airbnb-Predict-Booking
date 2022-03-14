@@ -58,7 +58,7 @@
     <dt>Feature Engineering.</dt>
       <dd>In this step, with coggle.it to make a mind map and use the mind map to create some hypothesis list, after this list, i created some new features based on mdatetime.</dd>
     <dt>Data Filtering.</dt>
-      <dd>Working on It.</dd>
+      <dd>Simple filtering clear inconsistencies.</dd>
   </dl>
 </ul>
 
