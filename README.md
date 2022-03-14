@@ -2,7 +2,7 @@
 
 ![airbnb](https://user-images.githubusercontent.com/75986085/158188129-ab8930d2-7999-412b-b24f-bf1c25a01b84.png)
 
-<h2>0. Airbnb Prediction</h2>
+<h2>0. Bussiness Problem</h2>
 <p style='text-align:center'><i>Airbnb, Inc. is an American company that operates an online marketplace for lodging, primarily homestays for vacation rentals, and tourism activities. Based in San Francisco, California, the platform is accessible via website and mobile app. Airbnb does not own any of the listed properties; instead, it profits by receiving commission from each booking.</i> ~Wiki</p>
 
 <p>New users on Airbnb can book a place to stay in 34,000+ cities across 190+ countries. By accurately predicting where a new user will book their first travel experience, Airbnb can share more personalized content with their community, decrease the average time to first booking, and better forecast demand.</p>
@@ -50,12 +50,7 @@
 
 <p>The Dataset Base <a href='https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings'>House Prices at Kaggle</a>.</p>
 
-
-<h2>1. Bussines Problem</h2>
-
-> *Predict the user destination based on user info and sessions actions.*>
-
-<h2>2. Solution Strategy & Assumptions </h2>
+<h2>1. Solution Strategy & Assumptions </h2>
 <h3>First CRISP Cycle</h3>
 <ul>
   <dl>
@@ -69,16 +64,16 @@
 </ul>
 
 <!--
-<h2>3. EDA Insight's</h2>
+<h2>2. EDA Insight's</h2>
 
 
-<h2>4. Data Preparation</h2>
+<h2>3. Data Preparation</h2>
 
 
-<h2>5. Machine Learning Models</h2>
+<h2>4. Machine Learning Models</h2>
 
 
-<h2>6. Bussiness Results</h2>
+<h2>5. Bussiness Results</h2>
 
 
 <h2>7. Model Deployment</h2>
