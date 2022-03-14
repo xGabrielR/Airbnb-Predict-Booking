@@ -3,14 +3,14 @@
 ![airbnb](https://user-images.githubusercontent.com/75986085/158188129-ab8930d2-7999-412b-b24f-bf1c25a01b84.png)
 
 <h2>0. Bussiness Problem</h2>
-<p style='text-align:center'><i>Airbnb, Inc. is an American company that operates an online marketplace for lodging, primarily homestays for vacation rentals, and tourism activities. Based in San Francisco, California, the platform is accessible via website and mobile app. Airbnb does not own any of the listed properties; instead, it profits by receiving commission from each booking.</i> ~Wiki</p>
+<p><i>Airbnb, Inc. is an American company that operates an online marketplace for lodging, primarily homestays for vacation rentals, and tourism activities. Based in San Francisco, California, the platform is accessible via website and mobile app. Airbnb does not own any of the listed properties; instead, it profits by receiving commission from each booking.</i> ~Wiki</p>
 
 <p>New users on Airbnb can book a place to stay in 34,000+ cities across 190+ countries. By accurately predicting where a new user will book their first travel experience, Airbnb can share more personalized content with their community, decrease the average time to first booking, and better forecast demand.</p>
 
 > *Predict the user destination based on user info and sessions actions.*
 
 <h3>0.1. What is a Marketplace ?</h3>
-<p>The marketplace is a bussiness model based on demand and offer, the new client install the app or acess the airbnb site for search your next booking, this new client demand a booking, the city or country is the offer for the new client to travel, the money basically comes from a tax based on demand and offer transaction.</p>
+<p>The marketplace is a bussiness model based on demand and offer, the new client install the app or acess the airbnb site for search your next booking, this new client demand a booking, the city or country is the offer for the new client to travel, the money basically comes from a tax based on demand and offer transaction or a monthly price.</p>
 <p>Examples of other two Marketplaces:</p>
 <ul>
   <ol>Uber. (Passagers -> Taxi)</ol>
@@ -18,7 +18,6 @@
 </ul>
 <p>One of the basic difference between marketplace and e-commerce, in marketplace, have some different sellers (have some other offerts) in example of Ifood, have some restaurants registred on app, in e-commerce is usually only products sold from the same company or manufacturer.</p>
 <p>On the first step is publish the products on the plataform of marketplace, in example of ifood, several different sellers register their products on the marketplace platform like fastfood, new unique dishes, and other foods. There are companies specialized in registering products in several marketplaces, such as Brazilian Osit Plataform</p>
-
 
 <h3>0.3. Metrics and First Assumptions</h3>
 <ul>
