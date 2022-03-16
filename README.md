@@ -59,13 +59,32 @@
       <dd>In this step, with coggle.it to make a mind map and use the mind map to create some hypothesis list, after this list, i created some new features based on mdatetime.</dd>
     <dt>Data Filtering.</dt>
       <dd>Simple filtering clear inconsistencies.</dd>
+    <dt>Data Balance.</dt>
+      <dd>Used SMOTETomek for Over and Undersampling.</dd>
+    <dt>Exploratory Data Analysis.</dt>
+      <dd>Analysis of two datasets simultaneously & hypothesis validation.</dd>
+    <dt>Data Preparation.</dt>
+      <dd>In Working.</dd>
   </dl>
 </ul>
 
-<!--
 <h2>2. EDA Insight's</h2>
 
+<h3>Top 3 Eda Insight's</h3>
 
+<p>Users do not use Google to loggin in Airbnb.</p>
+
+![s_method](https://user-images.githubusercontent.com/75986085/158493253-95c4569c-341c-43bd-949b-849fb20f7dfb.png)
+
+<p>Users with mean take 40 days to reserve, but with median it takes around 5 days. (Outliers Problem)</p>
+
+![mean](https://user-images.githubusercontent.com/75986085/158493271-582cb61a-54e2-4059-92a0-3db01f690556.png)
+
+<p>The percentage of new bookings remains constant up to a certain period in relation to the percentage of previous bookings.</p>
+
+![year_bookings](https://user-images.githubusercontent.com/75986085/158493281-6e19889a-e677-4648-83a2-f46d2c58d340.png)
+
+<!--
 <h2>3. Data Preparation</h2>
 
 
@@ -83,4 +102,5 @@
   <li><a href='https://www.oreilly.com/library/view/practical-statistics-for/9781491952955/'>Practical Statistics Book</li>
   <li><a href='https://www.strategyzer.com/books/business-model-generation'>Model Bussiness Book</li>
   <li><a href='https://www.ideianoar.com.br/marketplace/'>Marketplace by "Ideia no ar"</li>
+  <li><a href='https://imbalanced-learn.org/dev/references/generated/imblearn.combine.SMOTETomek.html'>Smote + Tomek Link</li>
 </ul>
