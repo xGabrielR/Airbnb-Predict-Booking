@@ -68,7 +68,34 @@
   </dl>
 </ul>
 
-<h2>2. EDA Insight's</h2>
+<h2>2. Exploratory Data Analysis</h2>
+
+<p>In Univariable Analisys</p>
+<ol>
+    <li>The Dataset have some normal features.</li>
+    <li>Secs Elapsed from Sessions dataset have high outliers.</li>
+</ol>
+
+<p>Bivariate Analysis</p>
+<ol>
+  <li>Users do not use Google to loggin in Airbnb.</li>
+  <li>Users with mean take 40 days to reserve, but with median it takes around 5 days.</li>
+  <li>The percentage of new bookings remains constant up to a certain period in relation to the percentage of previous bookings.</li>
+</ol>
+
+<p>List of Correlated Features</p>
+
+<p>Train Dataset:</p>
+<ul>
+    <li>Categorical Features: affliate_provider, first_browser, first_device_type</li>
+    <li>Numerical Features: Some Correlated Feature Engineering Dataset</li>
+</ul>
+
+<p>Session Dataset:</p>
+<ul>
+    <li>Categorical Features: action, action_detail</li>
+    <li>Numerical Features: //</li>
+</ul>
 
 <h3>Top 3 Eda Insight's</h3>
 
