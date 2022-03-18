@@ -115,7 +115,7 @@
 <p>Used Frequency Encoding for SMOTETomek, MinMaxScaler & RobustScaler.</p>
 <p>I have selected Frequency Encoding because he have good results on my other projects and i selected again.</p>
 
-<h3>SMOTETomek</h3>
+<h4>3.1. SMOTETomek</h4>
 <p>Smote is a technique for Oversampling based on k(5) nearest neighbours on dataset matrix space, and he generate new dataset row based on linear combination (convex combination). Tomeklinks is a Undersampling technique to reduce dataset size based on overlap data (M.L salt and pepper error) location</p>
 <p>And have SMOTETomeklinks class on Python for use on unbalanced dataset</p>
 
