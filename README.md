@@ -123,15 +123,26 @@
 
 <p>Diff between Smote, Smoteenn & Smotetomek, on references for more details, but Smote</p>
 
-<!--
 <h2>4. Machine Learning Models</h2>
+<p>I selected Only two models, a XGBClass & Neural Network with 64 Layers, but NN dont haved a good performace and take a long time to train, because of that i have selected XGB to Hyperparameter Tuning.</p>
+<p>With Random Search technique and cross validation, i have a tunned model with +0.2% of balanced accuracy for next predictions on first cycle.</p>
 
+![model](https://user-images.githubusercontent.com/75986085/159079769-efb420c0-41f9-4caa-98ee-cd4b999b719b.png)
+
+<p>The total model performace based on Mean and Standard Deviation for Cohen Kappa of ( 0.5396 +/- 0.0016 ) and for Balanced Acuracy of (	0.5571 +/- 0.0016 )</p>
+
+![bootstrap](https://user-images.githubusercontent.com/75986085/159080057-c8a214f8-0966-4f63-8e35-4af61bfa7581.png)
+
+<p>With 75.0% of confidence interval, the model performs is 54.7% and 55.3% based on 100 bootstrap (random sampling of dataset) to train and predict on validation dataset, this technique is similar to cross validation.</p>
 
 <h2>5. Bussiness Results</h2>
 
+![res](https://user-images.githubusercontent.com/75986085/159080572-d5e0ae1a-46bb-4f58-962a-dccf925c4b6d.png)
+
+<p>On Train Dataset and Validation Dataset, the model haved some good and worst predictions.</p>
 
 <h2>7. Model Deployment</h2>
--->
+<p>Working to Improve the Model Results.</p>
 
 <h2>X. References</h2>
 <ul>
