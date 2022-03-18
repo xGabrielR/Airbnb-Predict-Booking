@@ -119,6 +119,10 @@
 <p>Smote is a technique for Oversampling based on k(5) nearest neighbours on dataset matrix space, and he generate new dataset row based on linear combination (convex combination). Tomeklinks is a Undersampling technique to reduce dataset size based on overlap data (M.L salt and pepper error) location</p>
 <p>And have SMOTETomeklinks class on Python for use on unbalanced dataset</p>
 
+![sm](https://user-images.githubusercontent.com/75986085/159078786-432ad933-30b2-4276-bd96-9488a0f6ead5.png)
+
+<p>Diff between Smote, Smoteenn & Smotetomek, on references for more details, but Smote</p>
+
 <!--
 <h2>4. Machine Learning Models</h2>
 
@@ -131,8 +135,9 @@
 
 <h2>X. References</h2>
 <ul>
-  <li><a href='https://www.oreilly.com/library/view/practical-statistics-for/9781491952955/'>Practical Statistics Book</li>
-  <li><a href='https://www.strategyzer.com/books/business-model-generation'>Model Bussiness Book</li>
-  <li><a href='https://www.ideianoar.com.br/marketplace/'>Marketplace by "Ideia no ar"</li>
-  <li><a href='https://imbalanced-learn.org/dev/references/generated/imblearn.combine.SMOTETomek.html'>Smote + Tomek Link</li>
+  <li><a href='https://www.oreilly.com/library/view/practical-statistics-for/9781491952955/'>Practical Statistics Book</a></li>
+  <li><a href='https://www.strategyzer.com/books/business-model-generation'>Model Bussiness Book</a></li>
+  <li><a href='https://www.ideianoar.com.br/marketplace/'>Marketplace by "Ideia no ar"</a></li>
+  <li><a href='https://imbalanced-learn.org/dev/references/generated/imblearn.combine.SMOTETomek.html'>Smote + Tomek Link</a></li>
+  <li><a href='https://imbalanced-learn.org/dev/auto_examples/combine/plot_comparison_combine.html#sphx-glr-auto-examples-combine-plot-comparison-combine-py'>Smote, Smoteen & SmoteTomek</a></li>
 </ul>
