@@ -141,6 +141,11 @@
 
 <p>On Train Dataset and Validation Dataset, the model haved some good and worst predictions.</p>
 
+<ul>
+    <li>Total of Users on Dataset: 508991 </li>
+    <li>Total of Unique Rows on Dataset: 490961 </li>
+</ul>
+
 <h2>7. Model Deployment</h2>
 <p>Working to Improve the Model Results.</p>
 
