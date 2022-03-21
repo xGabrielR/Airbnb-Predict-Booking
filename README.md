@@ -48,7 +48,7 @@
 6. How is the cost of new users based on old users ?
 7. The fee of transaction is acessible to all new users based on counties ? ...
 
-<p>The Dataset Base <a href='https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings'>House Prices at Kaggle</a>.</p>
+<p>The Dataset Base <a href='https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings'>Airbnb Dataset</a>.</p>
 
 
 <h2>1. Solution Strategy & Assumptions Resume</h2>
@@ -173,25 +173,63 @@
 
 <p>Similar to smotetomek, but now the undersamplig is based on Edited Nearest Neighbours, with smoteen, i have more performcae on Base Random Forest.</p>
 
+![features](https://user-images.githubusercontent.com/75986085/159298757-3af49b28-6084-4d38-967c-61f41d138f4b.png)
+
+<p>Feature Importances of Random forest & Xgboost.</p>
+
 
 <h2>4. Feature Space Study</h2>
 <hr>
 
 <h3>4.1. PCA Embedding</h3>
 <p>The PCA performs a dimensionality reduction based on Eigenvalues and eigenvectors.</p>
+<p>In the PCA, first you need to set a n_components, its number of columns to performace the PCA. After that, the PCA will return the main combinations of the features with the greatest variation.</p>
 
+![pca_results](https://user-images.githubusercontent.com/75986085/159299291-77329e23-2afc-40b7-94a4-2f574ca47bec.png)
+
+<p>PCA without Tree and Reduced Dataset (10000 Examples)</p>
+
+![pca_reduced](https://user-images.githubusercontent.com/75986085/159311433-be72c553-77d2-4d74-8add-c9d5eb8d4f60.gif)
+
+<p>I have worked with full dataset twoo, but is hard to see any classification region</p>
+
+![pca_full](https://user-images.githubusercontent.com/75986085/159311536-89c49d26-3d66-4f2d-b027-de5a9f9171d5.gif)
 
 <h3>4.1. UMAP Embedding</h3>
 <p>The UMAP performs a dimensionality reduction based on Manifold (topological space), similar to t-SNE.</p>
+
+![umap_reduced](https://user-images.githubusercontent.com/75986085/159311605-d177ec81-9919-4263-b2a4-c7a043c1cea6.png)
+
+<p>I worked with UMAP reduced dataset to see any classification region on dataset.</p>
 
 
 <h3>4.1. t-SNE Embedding</h3>
 <p>The t-SNE performs a dimensionality reduction based on Manifold (topological space), is a tool to visualize high-dimensional data.</p>
 
+![tsne_reduced](https://user-images.githubusercontent.com/75986085/159311834-ae81cc42-de07-4109-b14a-341bda2d97bd.png)
+
+<p>Same thing to t-SNE, i prefer using reduced on this step to see classification regions. But t-SNE dont haved a good performace on reduced and full dataset.</p>
+
+![tsne_full](https://user-images.githubusercontent.com/75986085/159311932-79267dfd-4982-41e9-8323-ddc36c71528d.gif)
 
 <h3>4.1. Tree-Based Embedding</h3>
 <p>The Random Forest do not performs a dimensionality reduction, its possible to take the leaves of forests, because Tree make a embedding on leaves.</p>
 
+<p>In Tree, i tested PCA and UMAP on both datasets, reduced and full.</p>
+
+![umap_tree_reduced](https://user-images.githubusercontent.com/75986085/159312124-73b36cc1-43f6-46e2-ba07-15acbdf74bc9.png)
+
+![pca_tree_reduced](https://user-images.githubusercontent.com/75986085/159312158-aaa9acc1-b5fd-438d-9324-aee3220b0b8d.png)
+
+![pca_tree_reduced](https://user-images.githubusercontent.com/75986085/159312596-42034d6c-8182-480b-83a7-a07fa66bcb4c.gif)
+
+<p>UMAP and PCA reducers, both in reduced dataset to see any new region, but with tree leaves both haved greate performace.</p>
+
+![pca_tree_full](https://user-images.githubusercontent.com/75986085/159312623-7711da22-896d-4489-b6ea-c8098c9d484c.png)
+
+![pca_tree_full](https://user-images.githubusercontent.com/75986085/159313068-6be15228-a185-4056-bbd4-e4ef09a44d67.gif)
+
+<p>On full Dataset, PCA look's like a Monster / Dragon xD</p>
 
 <h2>5. Machine Learning Models</h2>
 <hr>
@@ -249,7 +287,7 @@
 <h2>7. Model Deployment</h2>
 <hr>
 
-<p>Working to Improve the Model Results.</p>
+<p>Working on It.</p>
 
 
 <h2>8. References</h2>
