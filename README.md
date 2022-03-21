@@ -177,26 +177,26 @@
 <h2>4. Feature Space Study</h2>
 <hr>
 
-<h3>PCA Embedding</h3>
+<h3>4.1. PCA Embedding</h3>
 <p>The PCA performs a dimensionality reduction based on Eigenvalues and eigenvectors.</p>
 
 
-<h3>UMAP Embedding</h3>
+<h3>4.1. UMAP Embedding</h3>
 <p>The UMAP performs a dimensionality reduction based on Manifold (topological space), similar to t-SNE.</p>
 
 
-<h3>t-SNE Embedding</h3>
+<h3>4.1. t-SNE Embedding</h3>
 <p>The t-SNE performs a dimensionality reduction based on Manifold (topological space), is a tool to visualize high-dimensional data.</p>
 
 
-<h3>Tree-Based Embedding</h3>
+<h3>4.1. Tree-Based Embedding</h3>
 <p>The Random Forest do not performs a dimensionality reduction, its possible to take the leaves of forests, because Tree make a embedding on leaves.</p>
 
 
-<h2>4. Machine Learning Models</h2>
+<h2>5. Machine Learning Models</h2>
 <hr>
 
-<h3>4.1. XGBoost Classifier First Cycle</h3>
+<h3>5.1. XGBoost Classifier First Cycle</h3>
 
 <p>I selected Only two models, a XGBClass & Neural Network with 64 Layers, but NN dont haved a good performace and take a long time to train, because of that i have selected XGB to Hyperparameter Tuning.</p>
 <p>With Random Search technique and cross validation, i have a tunned model with +0.2% of balanced accuracy for next predictions on first cycle.</p>
@@ -210,7 +210,7 @@
 <p>With 75.0% of confidence interval, the model performs is 54.7% and 55.3% based on 100 bootstrap (random sampling of dataset) to train and predict on validation dataset, this technique is similar to cross validation.</p>
 
 
-<h3>4.2. Random Forest Classifier Second Cycle</h3>
+<h3>5.2. Random Forest Classifier Second Cycle</h3>
 
 <p>I tested XGBoost in new dataset based on Smoteen, but XGBoost do not haved good performace again.</p>
 <p>At second cycle, i have selected Random Forest Model to classify new bookings, with this model i reached at 90% balanced accuracy for new users without using sessions dataset. With XGBoost i reached at aprox 67% of Balanced Accuracy in new dataset.</p>
@@ -225,10 +225,10 @@
 <p>I have performed a simple bootstrap with 1000 iterations to check the confidence interval of model performace in different scenarios.</p>
 
 
-<h2>5. Bussiness Results</h2>
+<h2>6. Bussiness Results</h2>
 <hr>
 
-<h3>5.1. First Cycle</h3>
+<h3>6.1. First Cycle</h3>
 
 ![res](https://user-images.githubusercontent.com/75986085/159080572-d5e0ae1a-46bb-4f58-962a-dccf925c4b6d.png)
 
@@ -239,7 +239,7 @@
     <li>Total of Unique Rows on Dataset: 490961 </li>
 </ul>
 
-<h3>5.2. Second Cycle</h3>
+<h3>6.2. Second Cycle</h3>
 
 ![rf_r](https://user-images.githubusercontent.com/75986085/159265745-d7ef43d0-9cac-474a-9a54-4f5ff6a9276b.png)
 
@@ -263,7 +263,7 @@
   <li><a href='https://imbalanced-learn.org/stable/references/generated/imblearn.combine.SMOTEENN.html'>Smote + Edited Nearest Neighbours</a></li>
   <li><a href='https://imbalanced-learn.org/dev/auto_examples/combine/plot_comparison_combine.html#sphx-glr-auto-examples-combine-plot-comparison-combine-py'>Smote, Smoteen & SmoteTomek</a></li>
   <li><a href='https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html'>t-SNE</a></li>
-  <li><a href=''>OIIIIIIII</a></li>
-  <li><a href=''>OIIIIIIII</a></li>
-  <li><a href=''>OIIIIIIII</a></li>
+  <li><a href='https://umap-learn.readthedocs.io/en/latest/'>UMAP</a></li>
+  <li><a href='https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html'>PCA</a></li>
+  <li><a href='https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html'>Random Forest Classifier</a></li>
 </ul>
