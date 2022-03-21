@@ -3,6 +3,7 @@
 ![airbnb](https://user-images.githubusercontent.com/75986085/158188129-ab8930d2-7999-412b-b24f-bf1c25a01b84.png)
 
 <h2>0. Bussiness Problem</h2>
+<hr>
 <p><i>Airbnb, Inc. is an American company that operates an online marketplace for lodging, primarily homestays for vacation rentals, and tourism activities. Based in San Francisco, California, the platform is accessible via website and mobile app. Airbnb does not own any of the listed properties; instead, it profits by receiving commission from each booking.</i> ~Wiki</p>
 
 <p>New users on Airbnb can book a place to stay in 34,000+ cities across 190+ countries. By accurately predicting where a new user will book their first travel experience, Airbnb can share more personalized content with their community, decrease the average time to first booking, and better forecast demand.</p>
@@ -51,9 +52,9 @@
 
 
 <h2>1. Solution Strategy & Assumptions Resume</h2>
+<hr>
 
 <h3>1.1. First CRISP Cycle</h3>
-<hr>
 <ul>
   <dl>
     <dt>Data Clearing & Descriptive Statistical.</dt>
@@ -107,9 +108,9 @@
 
 
 <h2>2. Exploratory Data Analysis</h2>
+<hr>
 
 <h3>2.1. EDA On First Cycle</h3>
-<hr>
 
 <p>In Univariable Analisys</p>
 <ol>
@@ -138,8 +139,8 @@
     <li>Numerical Features: //</li>
 </ul>
 
-
 <h3>Top 3 Eda Insight's</h3>
+<hr>
 
 <p>Users do not use Google to loggin in Airbnb.</p>
 
@@ -154,11 +155,13 @@
 ![year_bookings](https://user-images.githubusercontent.com/75986085/158493281-6e19889a-e677-4648-83a2-f46d2c58d340.png)
 
 <h2>3. Data Preparation</h2>
+<hr>
+
 <p>Used Frequency Encoding for SMOTETomek, MinMaxScaler & RobustScaler.</p>
 <p>I have selected Frequency Encoding because he have good results on my other projects and i selected again.</p>
 
 <h3>3.1. SMOTETomek</h3>
-<hr>
+
 <p>Smote is a technique for Oversampling based on k(5) nearest neighbours on dataset matrix space, and he generate new dataset row based on linear combination (convex combination). Tomeklinks is a Undersampling technique to reduce dataset size based on overlap data (M.L salt and pepper error) location</p>
 <p>And have SMOTETomeklinks class on Python for use on unbalanced dataset</p>
 
@@ -167,18 +170,33 @@
 <p>Diff between Smote, Smoteenn & Smotetomek, on references for more details, but Smote</p>
 
 <h3>3.2. SMOTEEN</h3>
-<hr>
-<p>Similar to smotetomek, but now the undersamplig is based on Edited Nearest Neighbours</p>
+
+<p>Similar to smotetomek, but now the undersamplig is based on Edited Nearest Neighbours, with smoteen, i have more performcae on Base Random Forest.</p>
 
 
 <h2>4. Feature Space Study</h2>
+<hr>
 
+<h3>PCA Embedding</h3>
+<p>The PCA performs a dimensionality reduction based on Eigenvalues and eigenvectors.</p>
+
+
+<h3>UMAP Embedding</h3>
+<p>The UMAP performs a dimensionality reduction based on Manifold (topological space), similar to t-SNE.</p>
+
+
+<h3>t-SNE Embedding</h3>
+<p>The t-SNE performs a dimensionality reduction based on Manifold (topological space), is a tool to visualize high-dimensional data.</p>
+
+
+<h3>Tree-Based Embedding</h3>
+<p>The Random Forest do not performs a dimensionality reduction, its possible to take the leaves of forests, because Tree make a embedding on leaves.</p>
 
 
 <h2>4. Machine Learning Models</h2>
+<hr>
 
 <h3>4.1. XGBoost Classifier First Cycle</h3>
-<hr>
 
 <p>I selected Only two models, a XGBClass & Neural Network with 64 Layers, but NN dont haved a good performace and take a long time to train, because of that i have selected XGB to Hyperparameter Tuning.</p>
 <p>With Random Search technique and cross validation, i have a tunned model with +0.2% of balanced accuracy for next predictions on first cycle.</p>
@@ -193,7 +211,6 @@
 
 
 <h3>4.2. Random Forest Classifier Second Cycle</h3>
-<hr>
 
 <p>I tested XGBoost in new dataset based on Smoteen, but XGBoost do not haved good performace again.</p>
 <p>At second cycle, i have selected Random Forest Model to classify new bookings, with this model i reached at 90% balanced accuracy for new users without using sessions dataset. With XGBoost i reached at aprox 67% of Balanced Accuracy in new dataset.</p>
@@ -209,9 +226,9 @@
 
 
 <h2>5. Bussiness Results</h2>
+<hr>
 
 <h3>5.1. First Cycle</h3>
-<hr>
 
 ![res](https://user-images.githubusercontent.com/75986085/159080572-d5e0ae1a-46bb-4f58-962a-dccf925c4b6d.png)
 
@@ -223,7 +240,6 @@
 </ul>
 
 <h3>5.2. Second Cycle</h3>
-<hr>
 
 ![rf_r](https://user-images.githubusercontent.com/75986085/159265745-d7ef43d0-9cac-474a-9a54-4f5ff6a9276b.png)
 
@@ -231,11 +247,14 @@
 <p>RF Model do not wrong any NDF class booking destination.</p>
 
 <h2>7. Model Deployment</h2>
+<hr>
+
 <p>Working to Improve the Model Results.</p>
 
 
-
 <h2>8. References</h2>
+<hr>
+
 <ul>
   <li><a href='https://www.oreilly.com/library/view/practical-statistics-for/9781491952955/'>Practical Statistics Book</a></li>
   <li><a href='https://www.strategyzer.com/books/business-model-generation'>Model Bussiness Book</a></li>
@@ -243,4 +262,8 @@
   <li><a href='https://imbalanced-learn.org/dev/references/generated/imblearn.combine.SMOTETomek.html'>Smote + Tomek Link</a></li>
   <li><a href='https://imbalanced-learn.org/stable/references/generated/imblearn.combine.SMOTEENN.html'>Smote + Edited Nearest Neighbours</a></li>
   <li><a href='https://imbalanced-learn.org/dev/auto_examples/combine/plot_comparison_combine.html#sphx-glr-auto-examples-combine-plot-comparison-combine-py'>Smote, Smoteen & SmoteTomek</a></li>
+  <li><a href='https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html'>t-SNE</a></li>
+  <li><a href=''>OIIIIIIII</a></li>
+  <li><a href=''>OIIIIIIII</a></li>
+  <li><a href=''>OIIIIIIII</a></li>
 </ul>
