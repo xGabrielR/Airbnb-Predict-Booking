@@ -2,6 +2,45 @@
 
 ![airbnb](https://user-images.githubusercontent.com/75986085/158188129-ab8930d2-7999-412b-b24f-bf1c25a01b84.png)
 
+<h2>Summary</h2>
+<hr>
+
+- [0. Bussiness Problem](#0-bussiness-problem)
+  - [0.1. What is a Marketplace](#01-what-is-a-marketplace)
+  - [0.2. Metrics and First Assumptions](#02-metrics-and-first-assumptions)
+
+- [1. Solution Strategy & Assumptions Resume](#1-solution-strategy-and-assumptions-resume)
+  - [1.1. First CRISP Cycle](#11-first-crisp-cycle)
+  - [1.2. Second CRISP Cycle](#12-second-crisp-cycle)
+  - [1.3. Third CRISP Cycle](#13-third-crisp-cycle)
+
+- [2. Exploratory Data Analysis](#2-exploratory-data-analysis)
+  - [2.1. EDA On First Cycle](#21-eda-on-first-cycle)
+  - [2.2. Top 3 Eda Insights](#22-top-3-eda-insights)
+
+- [3. Data Preparation](#3-data-preparation)
+  - [3.1. SMOTETomek](#31-smotetomek)
+  - [3.2. SMOTEEN](#32-smoteen)
+
+- [4. Feature Space Study](#4-feature-space-study)
+  - [4.1. PCA Embedding](#41-pca-embedding)
+  - [4.2. UMAP Embedding](#42-umap-embedding)
+  - [4.3. t-SNE Embedding](#43-t-sne-embedding)
+  - [4.4. Tree-Based Embedding](#44-tree-based-embedding)
+
+- [5. Machine Learning Models](#5-machine-learning-models)
+  - [5.1. XGBoost Classifier First Cycle](#51-xgboost-classifier-first-cycle)
+  - [5.2. Random Forest Classifier Second Cycle](#52-random-forest-classifier-second-cycle)
+
+- [6. Bussiness Results](#6-bussiness-results)
+  - [6.1. First Cycle](#61-first-cycle)
+  - [6.2. Second Cycle](#62-second-cycle)
+
+- [7. Model Deployment](#7-model-deployment)
+- [8. References](#8-references)
+
+---
+
 <h2>0. Bussiness Problem</h2>
 <hr>
 <p><i>Airbnb, Inc. is an American company that operates an online marketplace for lodging, primarily homestays for vacation rentals, and tourism activities. Based in San Francisco, California, the platform is accessible via website and mobile app. Airbnb does not own any of the listed properties; instead, it profits by receiving commission from each booking.</i> ~Wiki</p>
@@ -10,7 +49,7 @@
 
 > *Predict the user destination based on user info and sessions actions.*
 
-<h3>0.1. What is a Marketplace ?</h3>
+<h3>0.1. What is a Marketplace</h3>
 <p>The marketplace is a bussiness model based on demand and offer, the new client install the app or acess the airbnb site for search your next booking, this new client demand a booking, the city or country is the offer for the new client to travel, the money basically comes from a tax based on demand and offer transaction or a monthly price.</p>
 <p>Examples of other two Marketplaces:</p>
 <ul>
@@ -20,7 +59,7 @@
 <p>One of the basic difference between marketplace and e-commerce, in marketplace, have some different sellers (have some other offerts) in example of Ifood, have some restaurants registred on app, in e-commerce is usually only products sold from the same company or manufacturer.</p>
 <p>On the first step is publish the products on the plataform of marketplace, in example of ifood, several different sellers register their products on the marketplace platform like fastfood, new unique dishes, and other foods. There are companies specialized in registering products in several marketplaces, such as Brazilian Osit Plataform</p>
 
-<h3>0.3. Metrics and First Assumptions</h3>
+<h3>0.2. Metrics and First Assumptions</h3>
 <ul>
   <dl>
     <dt>Offer (People offering Accomodations)</dt>
@@ -50,8 +89,7 @@
 
 <p>The Dataset Base <a href='https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings'>Airbnb Dataset</a>.</p>
 
-
-<h2>1. Solution Strategy & Assumptions Resume</h2>
+<h2>1. Solution Strategy and Assumptions Resume</h2>
 <hr>
 
 <h3>1.1. First CRISP Cycle</h3>
@@ -139,7 +177,7 @@
     <li>Numerical Features: //</li>
 </ul>
 
-<h3>Top 3 Eda Insight's</h3>
+<h3>2.2. Top 3 Eda Insights</h3>
 <hr>
 
 <p>Users do not use Google to loggin in Airbnb.</p>
@@ -154,29 +192,32 @@
 
 ![year_bookings](https://user-images.githubusercontent.com/75986085/158493281-6e19889a-e677-4648-83a2-f46d2c58d340.png)
 
+
+
 <h2>3. Data Preparation</h2>
 <hr>
 
-<p>Used Frequency Encoding for SMOTETomek, MinMaxScaler & RobustScaler.</p>
+<p>For Encoding, i selected Frequency Encoding, i like this encoder and Target Encoder.</p>
 <p>I have selected Frequency Encoding because he have good results on my other projects and i selected again.</p>
+<p>For Rescaling i used both, MinMax and RobustScaler and for Nature Transformation used SIN / COS transformation.</p>
+
+![sm](https://user-images.githubusercontent.com/75986085/159078786-432ad933-30b2-4276-bd96-9488a0f6ead5.png)
+
+<p>Diff between Smote, Smoteenn & Smotetomek, on references for more details.</p>
 
 <h3>3.1. SMOTETomek</h3>
 
 <p>Smote is a technique for Oversampling based on k(5) nearest neighbours on dataset matrix space, and he generate new dataset row based on linear combination (convex combination). Tomeklinks is a Undersampling technique to reduce dataset size based on overlap data (M.L salt and pepper error) location</p>
 <p>And have SMOTETomeklinks class on Python for use on unbalanced dataset</p>
 
-![sm](https://user-images.githubusercontent.com/75986085/159078786-432ad933-30b2-4276-bd96-9488a0f6ead5.png)
-
-<p>Diff between Smote, Smoteenn & Smotetomek, on references for more details, but Smote</p>
-
 <h3>3.2. SMOTEEN</h3>
 
-<p>Similar to smotetomek, but now the undersamplig is based on Edited Nearest Neighbours, with smoteen, i have more performcae on Base Random Forest.</p>
+<p>Similar to smotetomek, but now the undersamplig is based on Edited Nearest Neighbours, with smoteen, the Random Forest Model have more performcae.</p>
 
 ![features](https://user-images.githubusercontent.com/75986085/159298757-3af49b28-6084-4d38-967c-61f41d138f4b.png)
 
-<p>Feature Importances of Random forest & Xgboost.</p>
-
+<p>For Feature selection to dims reduction, only used Feature Importances of Random forest & Xgboost.</p>
+<p>In Next Cycles i use BORUTA and Other Techniques.</p>
 
 <h2>4. Feature Space Study</h2>
 <hr>
@@ -195,15 +236,14 @@
 
 ![pca_full](https://user-images.githubusercontent.com/75986085/159311536-89c49d26-3d66-4f2d-b027-de5a9f9171d5.gif)
 
-<h3>4.1. UMAP Embedding</h3>
+<h3>4.2. UMAP Embedding</h3>
 <p>The UMAP performs a dimensionality reduction based on Manifold (topological space), similar to t-SNE.</p>
 
 ![umap_reduced](https://user-images.githubusercontent.com/75986085/159311605-d177ec81-9919-4263-b2a4-c7a043c1cea6.png)
 
 <p>I worked with UMAP reduced dataset to see any classification region on dataset.</p>
 
-
-<h3>4.1. t-SNE Embedding</h3>
+<h3>4.3. t-SNE Embedding</h3>
 <p>The t-SNE performs a dimensionality reduction based on Manifold (topological space), is a tool to visualize high-dimensional data.</p>
 
 ![tsne_reduced](https://user-images.githubusercontent.com/75986085/159311834-ae81cc42-de07-4109-b14a-341bda2d97bd.png)
@@ -212,7 +252,7 @@
 
 ![tsne_full](https://user-images.githubusercontent.com/75986085/159311932-79267dfd-4982-41e9-8323-ddc36c71528d.gif)
 
-<h3>4.1. Tree-Based Embedding</h3>
+<h3>4.4. Tree-Based Embedding</h3>
 <p>The Random Forest do not performs a dimensionality reduction, its possible to take the leaves of forests, because Tree make a embedding on leaves.</p>
 
 <p>In Tree, i tested PCA and UMAP on both datasets, reduced and full.</p>
@@ -231,6 +271,8 @@
 
 <p>On full Dataset, PCA look's like a Monster / Dragon xD</p>
 
+
+
 <h2>5. Machine Learning Models</h2>
 <hr>
 
@@ -247,21 +289,19 @@
 
 <p>With 75.0% of confidence interval, the model performs is 54.7% and 55.3% based on 100 bootstrap (random sampling of dataset) to train and predict on validation dataset, this technique is similar to cross validation.</p>
 
-
 <h3>5.2. Random Forest Classifier Second Cycle</h3>
 
-<p>I tested XGBoost in new dataset based on Smoteen, but XGBoost do not haved good performace again.</p>
-<p>At second cycle, i have selected Random Forest Model to classify new bookings, with this model i reached at 90% balanced accuracy for new users without using sessions dataset. With XGBoost i reached at aprox 67% of Balanced Accuracy in new dataset.</p>
+<p>On first cycle, i have tested XGBoost, and on second too in new dataset based on SMOTEEN, but XGBoost do not have good performace again.</p>
+<p>At second cycle Random Forest Model haved better performace to classify new bookings, with this model i reached at 90% balanced accuracy for new users without using sessions dataset. With XGBoost i reached at aprox 67% of Balanced Accuracy in new dataset.</p>
 
 ![3](https://user-images.githubusercontent.com/75986085/159268514-8aa1d2ec-f692-4dd8-a2c6-264341f94849.png)
 
 <p>With Random Search technique and cross validation, i have a tunned model with +/-.1% of balanced accuracy for next predictions on second cycle.</p>
-<p>Why this performace? I have selected more simple model on Tunning, for a good tuning, i need to train more times with more and different model parameters, for RF on second cycle i only selected three parameters for random search.</p>
+<p>Why this performace? I have selected more simple model on Tuning, for a good tuning, need to train more times with more and different model parameters, for RF on second cycle i only selected three parameters for random search.</p>
 
 ![bootstrap](https://user-images.githubusercontent.com/75986085/159269031-b5d1927c-0486-4cd0-a194-48b84d0fff20.png)
 
 <p>I have performed a simple bootstrap with 1000 iterations to check the confidence interval of model performace in different scenarios.</p>
-
 
 <h2>6. Bussiness Results</h2>
 <hr>
@@ -288,7 +328,6 @@
 <hr>
 
 <p>Working on It.</p>
-
 
 <h2>8. References</h2>
 <hr>
