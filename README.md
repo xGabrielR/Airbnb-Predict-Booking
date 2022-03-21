@@ -49,8 +49,11 @@
 
 <p>The Dataset Base <a href='https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings'>House Prices at Kaggle</a>.</p>
 
-<h2>1. Solution Strategy & Assumptions </h2>
-<h3>First CRISP Cycle</h3>
+
+<h2>1. Solution Strategy & Assumptions Resume</h2>
+
+<h3>1.1. First CRISP Cycle</h3>
+<hr>
 <ul>
   <dl>
     <dt>Data Clearing & Descriptive Statistical.</dt>
@@ -64,11 +67,49 @@
     <dt>Exploratory Data Analysis.</dt>
       <dd>Analysis of two datasets simultaneously & hypothesis validation.</dd>
     <dt>Data Preparation.</dt>
-      <dd>In Working.</dd>
+      <dd>Frequency Encoding & Robust and MinMaxScaler.</dd>
+    <dt>ML Models.</dt>
+      <dd>XGBoost with apx 58% accuracy.</dd>
   </dl>
 </ul>
 
+<h3>1.2. Second CRISP Cycle</h3>
+<hr>
+<ul>
+  <dl>
+    <dt>Data Balance.</dt>
+      <dd>Used SMOTEEN and SMOTETOMEK in new feature space based os data filtering.</dd>
+    <dt>Data Preparation.</dt>
+      <dd>Frequency Encoding & Robust and MinMaxScaler.</dd>
+    <dt>ML Models.</dt>
+      <dd>XGBoost with apx 66% accuracy.</dd>
+      <dd>Base RF with apx 92% accuracy.</dd>
+      <dd>Tuned RF with apx 90% accuracy (Simple Tuning)''.</dd>
+  </dl>
+</ul>
+
+<h3>1.3. Third CRISP Cycle</h3>
+<hr>
+<ul>
+  <dl>
+    <dt>Feature Space Study.</dt>
+      <dd>Used PCA Embedding for Dims reduction (2-4 Features)</dd>
+      <dd>Used UMAP Embedding for Dims reduction (2 Features)</dd>
+      <dd>Used t-SNE Embedding for Dims reduction. (3 Features)</dd>
+      <dd>Used Tree-Based Embedding for Dims reduction.</dd>
+      <ul>
+          <li>Used PCA on Tree-Based Embedding.</li>
+          <li>Used UMAP on Tree-Based Embedding.</li>
+          <li>All Feature Spaces i used Smoteen and Smotetomeklinks Datasets.</li>
+      </ul>
+  </dl>
+</ul>
+
+
 <h2>2. Exploratory Data Analysis</h2>
+
+<h3>2.1. EDA On First Cycle</h3>
+<hr>
 
 <p>In Univariable Analisys</p>
 <ol>
@@ -97,6 +138,7 @@
     <li>Numerical Features: //</li>
 </ul>
 
+
 <h3>Top 3 Eda Insight's</h3>
 
 <p>Users do not use Google to loggin in Airbnb.</p>
@@ -115,7 +157,8 @@
 <p>Used Frequency Encoding for SMOTETomek, MinMaxScaler & RobustScaler.</p>
 <p>I have selected Frequency Encoding because he have good results on my other projects and i selected again.</p>
 
-<h4>3.1. SMOTETomek</h4>
+<h3>3.1. SMOTETomek</h3>
+<hr>
 <p>Smote is a technique for Oversampling based on k(5) nearest neighbours on dataset matrix space, and he generate new dataset row based on linear combination (convex combination). Tomeklinks is a Undersampling technique to reduce dataset size based on overlap data (M.L salt and pepper error) location</p>
 <p>And have SMOTETomeklinks class on Python for use on unbalanced dataset</p>
 
@@ -123,7 +166,20 @@
 
 <p>Diff between Smote, Smoteenn & Smotetomek, on references for more details, but Smote</p>
 
+<h3>3.2. SMOTEEN</h3>
+<hr>
+<p>Similar to smotetomek, but now the undersamplig is based on Edited Nearest Neighbours</p>
+
+
+<h2>4. Feature Space Study</h2>
+
+
+
 <h2>4. Machine Learning Models</h2>
+
+<h3>4.1. XGBoost Classifier First Cycle</h3>
+<hr>
+
 <p>I selected Only two models, a XGBClass & Neural Network with 64 Layers, but NN dont haved a good performace and take a long time to train, because of that i have selected XGB to Hyperparameter Tuning.</p>
 <p>With Random Search technique and cross validation, i have a tunned model with +0.2% of balanced accuracy for next predictions on first cycle.</p>
 
@@ -135,7 +191,27 @@
 
 <p>With 75.0% of confidence interval, the model performs is 54.7% and 55.3% based on 100 bootstrap (random sampling of dataset) to train and predict on validation dataset, this technique is similar to cross validation.</p>
 
+
+<h3>4.2. Random Forest Classifier Second Cycle</h3>
+<hr>
+
+<p>I tested XGBoost in new dataset based on Smoteen, but XGBoost do not haved good performace again.</p>
+<p>At second cycle, i have selected Random Forest Model to classify new bookings, with this model i reached at 90% balanced accuracy for new users without using sessions dataset. With XGBoost i reached at aprox 67% of Balanced Accuracy in new dataset.</p>
+
+![3](https://user-images.githubusercontent.com/75986085/159268514-8aa1d2ec-f692-4dd8-a2c6-264341f94849.png)
+
+<p>With Random Search technique and cross validation, i have a tunned model with +/-.1% of balanced accuracy for next predictions on second cycle.</p>
+<p>Why this performace? I have selected more simple model on Tunning, for a good tuning, i need to train more times with more and different model parameters, for RF on second cycle i only selected three parameters for random search.</p>
+
+![bootstrap](https://user-images.githubusercontent.com/75986085/159269031-b5d1927c-0486-4cd0-a194-48b84d0fff20.png)
+
+<p>I have performed a simple bootstrap with 1000 iterations to check the confidence interval of model performace in different scenarios.</p>
+
+
 <h2>5. Bussiness Results</h2>
+
+<h3>5.1. First Cycle</h3>
+<hr>
 
 ![res](https://user-images.githubusercontent.com/75986085/159080572-d5e0ae1a-46bb-4f58-962a-dccf925c4b6d.png)
 
@@ -146,14 +222,25 @@
     <li>Total of Unique Rows on Dataset: 490961 </li>
 </ul>
 
+<h3>5.2. Second Cycle</h3>
+<hr>
+
+![rf_r](https://user-images.githubusercontent.com/75986085/159265745-d7ef43d0-9cac-474a-9a54-4f5ff6a9276b.png)
+
+<p>RF Model is more superior than XGBoost for this dataset.</p>
+<p>RF Model do not wrong any NDF class booking destination.</p>
+
 <h2>7. Model Deployment</h2>
 <p>Working to Improve the Model Results.</p>
 
-<h2>X. References</h2>
+
+
+<h2>8. References</h2>
 <ul>
   <li><a href='https://www.oreilly.com/library/view/practical-statistics-for/9781491952955/'>Practical Statistics Book</a></li>
   <li><a href='https://www.strategyzer.com/books/business-model-generation'>Model Bussiness Book</a></li>
   <li><a href='https://www.ideianoar.com.br/marketplace/'>Marketplace by "Ideia no ar"</a></li>
   <li><a href='https://imbalanced-learn.org/dev/references/generated/imblearn.combine.SMOTETomek.html'>Smote + Tomek Link</a></li>
+  <li><a href='https://imbalanced-learn.org/stable/references/generated/imblearn.combine.SMOTEENN.html'>Smote + Edited Nearest Neighbours</a></li>
   <li><a href='https://imbalanced-learn.org/dev/auto_examples/combine/plot_comparison_combine.html#sphx-glr-auto-examples-combine-plot-comparison-combine-py'>Smote, Smoteen & SmoteTomek</a></li>
 </ul>
