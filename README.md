@@ -92,6 +92,8 @@
 <h2>1. Solution Strategy and Assumptions Resume</h2>
 <hr>
 
+![google_sheets_deploy](https://user-images.githubusercontent.com/75986085/161452041-90ee21ea-3a1a-42f7-b16a-4436490df41e.gif)
+
 <h3>1.1. First CRISP Cycle</h3>
 <ul>
   <dl>
@@ -327,7 +329,9 @@
 <h2>7. Model Deployment</h2>
 <hr>
 
-<p>Working on It.</p>
+https://user-images.githubusercontent.com/75986085/161451983-2ed0fdd2-da30-463d-af22-846a29223bc4.mp4
+
+<p>At Google Sheets with Google Sheets Scripts (.gs) and Heroku for Model.</p>
 
 <h2>8. References</h2>
 <hr>
