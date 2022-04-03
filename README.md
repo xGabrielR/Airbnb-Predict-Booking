@@ -336,6 +336,7 @@
   <li><a href='https://www.oreilly.com/library/view/practical-statistics-for/9781491952955/'>Practical Statistics Book</a></li>
   <li><a href='https://www.strategyzer.com/books/business-model-generation'>Model Bussiness Book</a></li>
   <li><a href='https://www.ideianoar.com.br/marketplace/'>Marketplace by "Ideia no ar"</a></li>
+  <li><a href='https://partner.booking.com/pt-br/ajuda/trabalhar-com-booking/ficando-online/como-bookingcom-funciona-para-propriet%C3%A1rios'>Booking by "partner.booking".</li>
   <li><a href='https://imbalanced-learn.org/dev/references/generated/imblearn.combine.SMOTETomek.html'>Smote + Tomek Link</a></li>
   <li><a href='https://imbalanced-learn.org/stable/references/generated/imblearn.combine.SMOTEENN.html'>Smote + Edited Nearest Neighbours</a></li>
   <li><a href='https://imbalanced-learn.org/dev/auto_examples/combine/plot_comparison_combine.html#sphx-glr-auto-examples-combine-plot-comparison-combine-py'>Smote, Smoteen & SmoteTomek</a></li>
