@@ -65,12 +65,12 @@
     <dt>Offer (People offering Accomodations)</dt>
       <dd>☁ Number of New Users</dd>
       <dd>☁ Channels where these new users come (Online & Offline)</dd>
-      <dd>☁ LTV (Life Time Value)</dd>
-      <dd>☁ CAC (Client Aquisition Cost)</dd>
-      <dd>☁ Frequency of Bookings.</dd>
       <dd>☁ Bounce Rate (On App or Website)</dd>
       <dd>☁ Other Site/App Metrics.</dd>
     <dt>Demmand (People Finding Accomodations)</dt>
+      <dd>☁ LTV (Life Time Value)</dd>
+      <dd>☁ CAC (Client Aquisition Cost)</dd>
+      <dd>☁ Frequency of Bookings.</dd>
       <dd>☁ Number of Country to Booking.</dd>
       <dd>☁ Mean price of theses countries.</dd>
       <dd>☁Properties Size / Diversity.</dd>
