@@ -5,7 +5,7 @@
 <h2>Summary</h2>
 <hr>
 
-- [0. Bussiness Problem](#0-bussiness-problem)
+- [0. Business Problem](#0-bussiness-problem)
   - [0.1. What is a Marketplace](#01-what-is-a-marketplace)
   - [0.2. Metrics and First Assumptions](#02-metrics-and-first-assumptions)
 
@@ -41,7 +41,7 @@
 
 ---
 
-<h2>0. Bussiness Problem</h2>
+<h2>0. Business Problem</h2>
 <hr>
 <p><i>Airbnb, Inc. is an American company that operates an online marketplace for lodging, primarily homestays for vacation rentals, and tourism activities. Based in San Francisco, California, the platform is accessible via website and mobile app. Airbnb does not own any of the listed properties; instead, it profits by receiving commission from each booking.</i> ~Wiki</p>
 
